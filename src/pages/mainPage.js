@@ -48,15 +48,15 @@ export default function Users() {
 
   useEffect(() => {
     try {
-      getJSON("https://github.com/dingusdev/vgdatainspect/blob/main/rcogfileexts.json", function (status, resp) {
+      getJSON("https://raw.githubusercontent.com/dingusdev/vgdatainspect/main/rcogfileexts.json", function (status, resp) {
         if (resp) {
           setFileExtensionSettings(resp);
         } else {
-          dispatch(setSnackbar(true, "error", `Could not obtains file extension settings json. Received HTTP status code: ${status}`));
+          dispatch(setSnackbar(true, "error", `Could not obtain file extension settings json. Received HTTP status code: ${status}`));
         }
       });
     } catch (err) {
-      dispatch(setSnackbar(true, "error", `Could not obtains file extension settings json: ${err}`));
+      dispatch(setSnackbar(true, "error", `Could not obtain file extension settings json: ${err}`));
     }
     // eslint-disable-next-line
   }, []);

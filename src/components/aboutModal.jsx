@@ -31,7 +31,9 @@ export default function AlertDialog() {
         <DialogTitle>{"About"}</DialogTitle>
         <DialogContent>
           <DialogContentText style={{ textAlign: 'center' }}>
-            This is a JavaScript port of VGDataInspect.
+            This is a JavaScript port of VGDataInspect.<br/>
+            Currently it only checks the file extension.<br/>
+            To obtain the extension to name mappings, a GET request to VGDataInspect's repo is preformed. This is done so this app's list is always up to date.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
